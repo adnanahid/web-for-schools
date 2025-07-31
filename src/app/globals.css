@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  @apply antialiased;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
