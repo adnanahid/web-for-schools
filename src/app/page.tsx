@@ -1,8 +1,22 @@
+import CommitteeMembers from "@/components/HomePage/CommitteeMembers";
+import CurriculumInfo from "@/components/HomePage/CurriculumInfo";
+import Footer from "@/components/HomePage/Footer";
+import HeadmasterWelcome from "@/components/HomePage/HeadmasterWelcome";
+import HeroSlider from "@/components/HomePage/HeroSlider";
+import Navigation from "@/components/HomePage/Navigation";
+import NoticeBoard from "@/components/HomePage/NoticeBoard";
+import RecentResults from "@/components/HomePage/RecentResults";
+
 export default function HomePage() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">স্কুল তথ্য ব্যবস্থাপনা সাইটে স্বাগতম</h1>
-      <p className="mt-4">এই ওয়েবসাইটে আপনি প্রতিষ্ঠানের সকল তথ্য দেখতে পারবেন।</p>
+    <div className="">
+      
+        <HeroSlider />
+        <RecentResults />
+        <NoticeBoard />
+        <HeadmasterWelcome />
+        <CommitteeMembers />
+        <CurriculumInfo />
     </div>
   );
 }

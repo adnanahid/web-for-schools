@@ -1,9 +1,13 @@
+import { Hind_Siliguri } from "next/font/google";
+import Navigation from "@/components/HomePage/Navigation";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Sidebar } from "@/components/Sidebar";
+import Footer from "@/components/HomePage/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const hindSiliguri = Hind_Siliguri({
+  subsets: ["bengali"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "School Info System",
@@ -17,11 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bn">
-      <body className={inter.className}>
-        <Header />
-        <div className="flex">
-          <Sidebar />
+      <body className={hindSiliguri.className}>
+        <div className="">
+          <header>
+            <Navigation />
+          </header>
           <main className="flex-1 p-6">{children}</main>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </body>
     </html>
