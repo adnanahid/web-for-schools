@@ -67,7 +67,7 @@ const committeeMembers = [
 
 const CommitteeMembers = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -80,7 +80,7 @@ const CommitteeMembers = () => {
           <p className="text-muted-foreground font-body text-lg max-w-2xl mx-auto">
             অভিজ্ঞ ও দক্ষ শিক্ষাবিদদের নেতৃত্বে আমাদের প্রতিষ্ঠান পরিচালিত হয়
           </p>
-          <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mt-4"></div>
+          <div className="h-1 w-20 rounded-full mx-auto mt-4"></div>
         </div>
 
         {/* Committee Members Grid */}

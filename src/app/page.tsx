@@ -8,13 +8,12 @@ import RecentResults from "@/components/HomePage/RecentResults";
 export default function HomePage() {
   return (
     <div className="">
-      
-        <HeroSlider />
-        <RecentResults />
-        <NoticeBoard />
-        <HeadmasterWelcome />
-        <CommitteeMembers />
-        <CurriculumInfo />
+      <HeroSlider />
+      <RecentResults />
+      <NoticeBoard />
+      <HeadmasterWelcome />
+      <CommitteeMembers />
+      <CurriculumInfo />
     </div>
   );
 }

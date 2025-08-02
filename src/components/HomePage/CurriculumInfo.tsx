@@ -91,7 +91,7 @@ const achievements = [
 
 const CurriculumInfo = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-card/50">
+    <section className="py-16 bg-white from-background to-card/50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -212,7 +212,7 @@ const CurriculumInfo = () => {
             <Button
               variant="outline"
               size="lg"
-              className="font-body bg-white/10 border-white/30 text-white hover:bg-white/20"
+              className="font-body bg-white border-white/30 text-black"
             >
               ভর্তির তথ্য জানুন
             </Button>

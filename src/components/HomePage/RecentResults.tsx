@@ -84,7 +84,7 @@ const toppers = [
 
 const RecentResults = () => {
   return (
-    <section className="py-16 bg-card">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -98,7 +98,6 @@ const RecentResults = () => {
             আমাদের শিক্ষার্থীদের একাডেমিক ও অন্যান্য ক্ষেত্রের উল্লেখযোগ্য
             সাফল্য
           </p>
-          <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mt-4"></div>
         </div>
 
         {/* Exam Results Overview */}
