@@ -12,20 +12,21 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const menuItems = [
-    { label: "প্রধান পাতা", href: "#", hasDropdown: false },
+    { label: "প্রধান পাতা", href: "/", hasDropdown: false },
     {
       label: "আমাদের সম্পর্কে",
       href: "#",
       hasDropdown: true,
       dropdownItems: [
-        { label: "ইতিহাস ও ঐতিহ্য", href: "#" },
-        { label: "লক্ষ্য ও উদ্দেশ্য", href: "#" },
+        { label: "ইতিহাস ও ঐতিহ্য", href: "/about-us/our-history" },
+        { label: "লক্ষ্য ও উদ্দেশ্য", href: "/about-us/mission-and-vision" },
         { label: "পরিচালনা কমিটি", href: "#" },
         { label: "শিক্ষক মণ্ডলী", href: "#" },
       ],
@@ -118,17 +119,23 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center space-x-1">
               {menuItems.map((item) => (
                 <div key={item.label} className="relative group">
-                  <button
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors font-body"
-                    onClick={() =>
-                      item.hasDropdown && toggleDropdown(item.label)
-                    }
-                  >
-                    {item.label}
-                    {item.hasDropdown && (
+                  {item.hasDropdown ? (
+                    <button
+                      className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors font-body"
+                      onClick={() => toggleDropdown(item.label)}
+                      type="button"
+                    >
+                      {item.label}
                       <ChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180" />
-                    )}
-                  </button>
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors font-body"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && item.dropdownItems && (
@@ -177,21 +184,28 @@ const Navigation = () => {
               <div className="py-4 space-y-2">
                 {menuItems.map((item) => (
                   <div key={item.label}>
-                    <button
-                      className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-foreground hover:bg-primary/5 transition-colors font-body"
-                      onClick={() =>
-                        item.hasDropdown && toggleDropdown(item.label)
-                      }
-                    >
-                      {item.label}
-                      {item.hasDropdown && (
+                    {item.hasDropdown ? (
+                      <button
+                        className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-foreground hover:bg-primary/5 transition-colors font-body"
+                        onClick={() => toggleDropdown(item.label)}
+                        type="button"
+                      >
+                        {item.label}
                         <ChevronDown
                           className={`h-4 w-4 transition-transform ${
                             activeDropdown === item.label ? "rotate-180" : ""
                           }`}
                         />
-                      )}
-                    </button>
+                      </button>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="flex items-center w-full px-4 py-2 text-sm font-medium text-foreground hover:bg-primary/5 transition-colors font-body"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
 
                     {/* Mobile Dropdown */}
                     {item.hasDropdown &&
