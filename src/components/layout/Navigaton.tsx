@@ -27,8 +27,8 @@ const Navigation = () => {
       dropdownItems: [
         { label: "ইতিহাস ও ঐতিহ্য", href: "/about-us/our-history" },
         { label: "লক্ষ্য ও উদ্দেশ্য", href: "/about-us/mission-and-vision" },
-        { label: "পরিচালনা কমিটি", href: "#" },
-        { label: "শিক্ষক মণ্ডলী", href: "#" },
+        { label: "পরিচালনা কমিটি", href: "/about-us/management-committee" },
+        { label: "শিক্ষক মণ্ডলী", href: "/about-us/teachers" },
       ],
     },
     {
